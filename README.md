@@ -1,4 +1,4 @@
-## Le4ked P4ssw0rds
+# Le4ked P4ssw0rds
 
 Le4ked P4ssw0rds is a Python tool designed to search for leaked passwords and check their exposure status. It integrates with the ProxyNova API to find leaks associated with an email and uses the Pwned Passwords API to check for password breaches.
 Features
