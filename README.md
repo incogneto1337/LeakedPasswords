@@ -28,8 +28,6 @@ Usage
 
     Execute the script using Python:
 
-    bash
-
     python le4ked_p4ssw0rds.py
 
     Input Details
@@ -41,12 +39,3 @@ Usage
 
     After fetching results, you will be prompted to save them. Enter the desired file name with .json or .txt extension, or choose not to save.
 
-Example
-
-plaintext
-
-Enter the email/user to search: example@example.com
-Enter proxy (optional): 
-Enter the number of results (default 20): 10
-Save results? (yes/no): yes
-Enter output file name (.json or .txt): results.txt
