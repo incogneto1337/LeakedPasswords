@@ -48,6 +48,23 @@ def is_valid_proxy(proxy):
     except requests.RequestException:
         return False
 
+def check_and_install_sherlock():
+    """Check if Sherlock is installed, and install it if not using apt."""
+    try:
+        # Check if Sherlock is installed
+        subprocess.run(['sherlock', '--help'], capture_output=True, text=True, check=True)
+        print(colored("[+] Sherlock is already installed.", "green"))
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        print(colored("[!] Sherlock not found. Installing Sherlock...", "yellow"))
+        try:
+            # Install Sherlock using apt
+            subprocess.run(['sudo', 'apt', 'install', '-y', 'sherlock'], check=True)
+            print(colored("[+] Sherlock installed successfully.", "green"))
+        except subprocess.CalledProcessError as e:
+            print(colored(f"[!] Failed to install Sherlock: {e}", "red"))
+            logging.error(f"Failed to install Sherlock: {e}")
+
+
 def find_leaks_proxynova(email, proxy=None, number=DEFAULT_NUMBER_OF_RESULTS):
     """
     Fetch leaks from ProxyNova API.
@@ -178,6 +195,9 @@ def main():
     centered_banner = center_multiline_text(figlet_banner, terminal_width)
     print(colored(centered_banner, "yellow"))
 
+    # Check and install Sherlock if necessary
+    check_and_install_sherlock()
+
     email = input(colored("Enter the username to search: ", "yellow")).strip()
     if not email:
         print(colored("[!] Username cannot be empty!", "red"))
@@ -207,6 +227,7 @@ def main():
             print_results(results)
     else:
         print(colored("[!] No leaks found.\n", "red"))
+
 
 if __name__ == '__main__':
     main()
