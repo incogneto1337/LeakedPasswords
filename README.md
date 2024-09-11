@@ -15,12 +15,6 @@ Requirements
     Python 3.x
     pip install -r requirements.txt
 
-You can install the required libraries using pip:
-
-bash
-
-pip install requests pyfiglet tabulate neotermcolor
-
 Usage
 
     Run the Script
