@@ -13,10 +13,7 @@ Features
 Requirements
 
     Python 3.x
-    requests library
-    pyfiglet library
-    tabulate library
-    neotermcolor library
+    pip install -r requirements.txt
 
 You can install the required libraries using pip:
 
@@ -30,7 +27,7 @@ Usage
 
     Execute the script using Python:
 
-    python le4ked_p4ssw0rds.py
+    python leakedpasswords.py
 
     Input Details
         Enter the email or username you want to search for.
