@@ -3,19 +3,20 @@
 ![Le4ked P4ssw0rds Banner](https://pbs.twimg.com/media/GXKcnnOawAA8sw0.jpg)
 
 Le4ked P4ssw0rds is a Python tool designed to search for leaked passwords and check their exposure status. It integrates with the ProxyNova API to find leaks associated with an email and uses the Pwned Passwords API to check for password breaches.
-Features
+
+## Features
 
     Fetch leaked data related to a given email from ProxyNova.
     Check if passwords have been exposed in known data breaches.
     Save results in JSON or TXT format.
     Display results in a tabular format with breach notifications.
 
-Requirements
+## Requirements
 
     Python 3.x
     pip install -r requirements.txt
 
-Usage
+## Usage
 
     Run the Script
 
