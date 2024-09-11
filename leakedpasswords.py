@@ -98,9 +98,9 @@ def main():
     centered_banner = center_multiline_text(figlet_banner, terminal_width)
     print(colored(centered_banner, "yellow"))
 
-    email = input("Enter the email/user to search: ").strip()
+    email = input("Enter the username to search: ").strip()
     if not email:
-        print(colored("[!] Email/user cannot be empty!", "red"))
+        print(colored("[!] User cannot be empty!", "red"))
         return
 
     proxy = input("Enter proxy (optional): ").strip()
