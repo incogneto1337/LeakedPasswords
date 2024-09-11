@@ -24,7 +24,7 @@ Usage
     python leakedpasswords.py
 
     Input Details
-        Enter the email or username you want to search for.
+        Enter the username you want to search for.
         Optionally, provide a proxy (in the format http://proxyserver:port).
         Specify the number of results you want to retrieve (default is 20).
 
