@@ -61,8 +61,13 @@ def check_and_install_sherlock():
             subprocess.run(['sudo', 'apt', 'install', '-y', 'sherlock'], check=True)
             print(colored("[+] Sherlock installed successfully.", "green"))
         except subprocess.CalledProcessError as e:
-            print(colored(f"[!] Failed to install Sherlock: {e}", "red"))
+            print(colored(f"[!] Failed to install Sherlock. You might need root privileges to install packages.", "red"))
+            print(colored(f"[!] Error details: {e}", "red"))
             logging.error(f"Failed to install Sherlock: {e}")
+        except Exception as e:
+            print(colored(f"[!] Unexpected error occurred while trying to install Sherlock: {e}", "red"))
+            logging.error(f"Unexpected error occurred while trying to install Sherlock: {e}")
+
 
 
 def find_leaks_proxynova(email, proxy=None, number=DEFAULT_NUMBER_OF_RESULTS):
